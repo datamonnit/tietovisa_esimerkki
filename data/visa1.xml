@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tietovisa>
+  <nimi>Vihannes-visa</nimi>
+  <tekijä>T.Puro</tekijä>
+  <pvm>14.3.2017</pvm>
+  <taso pisteet="1">
+    <kysymys>Mikä seuraavista ei ole vihannes?</kysymys>
+    <vastaus>Peruna</vastaus>
+    <vastaus>Porkkana</vastaus>
+    <vastaus oikein="ok">Nakki</vastaus>
+  </taso>
+  <taso pisteet="5">
+    <kysymys>Minkä värinen on porkkana?</kysymys>
+    <vastaus>Vihreä</vastaus>
+    <vastaus>Musta</vastaus>
+    <vastaus>Oranssi</vastaus>
+    <vastaus oikein="ok">Keltainen</vastaus>
+  </taso>
+  <taso pisteet="5">
+    <kysymys>Onko mansikka vihannes?</kysymys>
+    <vastaus oikein="ok">Ei</vastaus>
+    <vastaus>Kyllä</vastaus>
+  </taso>
+</tietovisa>
