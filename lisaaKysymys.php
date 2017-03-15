@@ -44,7 +44,7 @@ $pvm = $xml->pvm;
 
       <div class="row marketing">
         <div class="col-lg-12">
-          <form>
+          <form action="tallennaKysymys.php" method="get">
             <ul class="list-group">
               <li class="list-group-item">
                 <label>Kysymys</label>
