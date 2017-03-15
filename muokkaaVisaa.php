@@ -35,40 +35,32 @@ $pvm = $xml->pvm;
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Aloitussivu</a></li>
-            <li role="presentation"><a href="muokkaaVisaa.php">Muokkaa</a></li>
+            <li role="presentation" class="active"><a href="index.php">Visaan</a></li>
+            <li role="presentation"><a href="#">Muokkaa</a></li>
+            <li role="presentation"><a href="lisaaKysymys.php">Lisää kysymys</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted"><?php echo $nimi . ' : ' . $tekijä; ?></h3>
+        <h3 class="text-muted"><?php echo "Muokkaa visaa nimeltä: " . $nimi; ?></h3>
       </div>
 
-      <div class="jumbotron">
-        <h1>Testaa tietosi</h1>
-        <h2><?php echo $nimi; ?></h2>
-      </div>
-  <form action="tarkistaVastaukset.php" method="get">
-    <?php $kysymysNumero = 0; ?>
-    <?php foreach($xml->taso as $tehtävä): ?>
       <div class="row marketing">
         <div class="col-lg-12">
-          <?php
-            echo "<h3>".$tehtävä->kysymys."</h3>";
-            echo '<ul class="list-group">';
-            $kysymysNumero++;
-            foreach($tehtävä->vastaus as $vastaus){
-              echo '<li class="list-group-item"><input type="radio" name="'.$kysymysNumero.'" value="'.$vastaus.'"> '.$vastaus.'</li>';
-            }
-            echo "</ul>";
-          ?>
+          <a href="lisaaKysymys.php" class="btn btn-primary">Lisää kysymys</a>
         </div>
       </div>
-    <?php endforeach; ?>
-    <div class="row marketing">
-      <div class="col-lg-12">
-        <input type="submit" value="Tarkasta vastaukset" class="btn btn-primary" />
-      </div>
-    </div>
-  </form>
+
+
+      <?php foreach ($xml->taso as $tehtävä): ?>
+        <div class="row marketing">
+          <div class="col-lg-12">
+            <?php
+              echo "<h3>" . $tehtävä->kysymys . "</h3>";
+              echo '<button class="btn btn-danger">Poista</button>';
+              echo '<button class="btn btn-primary">Muokkaa</button>';
+             ?>
+          </div>
+        </div>
+      <?php endforeach; ?>
 
       <footer class="footer">
         <p>&copy; 2016 Puro</p>
