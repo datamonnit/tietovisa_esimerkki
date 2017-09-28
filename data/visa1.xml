@@ -3,4 +3,15 @@
   <nimi>Vihannes-visa</nimi>
   <tekijä>T.Puro</tekijä>
   <pvm>14.3.2017</pvm>
+  <taso pisteet="10">
+    <kysymys>Paljonko kello on nyt?</kysymys>
+    <vastaus oikein="ok">13:30</vastaus>
+    <vastaus>14:00</vastaus>
+    <vastaus>50100 Mikkeli</vastaus>
+  </taso>
+  <taso pisteet="10">
+    <kysymys>Koska mennän syömään?</kysymys>
+    <vastaus>Kohta</vastaus>
+    <vastaus oikein="ok">Ei koskaan</vastaus>
+  </taso>
 </tietovisa>

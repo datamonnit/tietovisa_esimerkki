@@ -1,4 +1,13 @@
 <?php
+session_start();
+include_once('autentikoi.php');
+
+if (!autentikoiBasic()) {
+  header('refresh:2;url=index.php');
+  die('<h1 style="color=red">Pääsy evätty!</h1>');
+}
+
+
 $xml = simplexml_load_file('data/visa1.xml');
 $nimi = $xml->nimi;
 $tekijä = $xml->tekijä;
@@ -40,7 +49,7 @@ $pvm = $xml->pvm;
             <li role="presentation"><a href="lisaaKysymys.php">Lisää kysymys</a></li>
           </ul>
         </nav>
-        <h3 class="text-muted"><?php echo "Muokkaa visaa nimeltä: " . $nimi; ?></h3>
+        <h3 class="text-muted">Tervetuloa <?php echo $_SESSION['user']; ?>!</h3>
       </div>
 
       <div class="row marketing">
@@ -55,8 +64,8 @@ $pvm = $xml->pvm;
           <div class="col-lg-12">
             <?php
               echo "<h3>" . $tehtävä->kysymys . "</h3>";
-              echo '<a href="poistaKysymys.php?id='.$i++.'" class="btn btn-danger">Poista</a>';
-              echo '<button class="btn btn-primary">Muokkaa</button>';
+              echo '<a href="poistaKysymys.php?id='.$i.'" class="btn btn-danger">Poista</a>';
+              echo '<a href="muokkaaKysymys.php?id='.$i++.'" class="btn btn-primary">Muokkaa</a>';
              ?>
           </div>
         </div>
