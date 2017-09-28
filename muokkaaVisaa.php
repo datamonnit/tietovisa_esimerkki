@@ -49,13 +49,13 @@ $pvm = $xml->pvm;
         </div>
       </div>
 
-
+      <?php $i = 0; ?>
       <?php foreach ($xml->taso as $tehtävä): ?>
         <div class="row marketing">
           <div class="col-lg-12">
             <?php
               echo "<h3>" . $tehtävä->kysymys . "</h3>";
-              echo '<button class="btn btn-danger">Poista</button>';
+              echo '<a href="poistaKysymys.php?id='.$i++.'" class="btn btn-danger">Poista</a>';
               echo '<button class="btn btn-primary">Muokkaa</button>';
              ?>
           </div>
