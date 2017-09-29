@@ -36,8 +36,7 @@ for ($i=0; $i<5; $i++){
   if (!empty(${"v".$j})){
     $taso->vastaus[] = ${"v".$j}; // $v1, $v2, jne.
     if ($i === $oikein) {
-      $taso->vastaus[$i]['oikein'] = 'ok';
-      // $taso->vastaus[$i]->addAttribute('oikein','ok');
+        $taso->vastaus[$i]['oikein'] = 'ok';
     }
   }
 }

@@ -17,6 +17,7 @@ if (empty($_GET) || !isset($_GET['id'])) {
 $xml = simplexml_load_file('data/visa1.xml');
 $i = intval($_GET['id']);
 $taso = $xml->taso[$i];
+
 ?>
 <!DOCTYPE html>
 <html lang="fi">
@@ -28,7 +29,7 @@ $taso = $xml->taso[$i];
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $nimi; ?></title>
+    <title><?php echo $xml->nimi; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -61,6 +62,9 @@ $taso = $xml->taso[$i];
           <form action="muokkaaKysymysTallennus.php" method="post">
             <input type="hidden" name="id" value="<?php echo $i; ?>">
             <ul class="list-group">
+              <li class="list-group-item">
+                <input type="submit" value="Tallenna kysmys" class="btn btn-primary">
+              </li>
               <li class="list-group-item">
                 <label>Kysymys</label>
                 <input type="text" name="kysymys" value="<?php echo $taso->kysymys; ?>" class="form-control">
