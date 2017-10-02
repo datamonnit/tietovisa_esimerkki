@@ -8,7 +8,7 @@ if (!autentikoiBasic()) {
 }
 
 
-$xml = simplexml_load_file('data/visa1.xml');
+$xml = simplexml_load_file('data/visa.xml');
 $nimi = $xml->nimi;
 $tekijä = $xml->tekijä;
 $pvm = $xml->pvm;

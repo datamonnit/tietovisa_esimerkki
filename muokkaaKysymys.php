@@ -14,7 +14,7 @@ if (empty($_GET) || !isset($_GET['id'])) {
   die('<h1>Virhe!</h1><p>Et ole valinnut muokattavaa kysymystä.</p>');
 }
 
-$xml = simplexml_load_file('data/visa1.xml');
+$xml = simplexml_load_file('data/visa.xml');
 $i = intval($_GET['id']);
 $taso = $xml->taso[$i];
 

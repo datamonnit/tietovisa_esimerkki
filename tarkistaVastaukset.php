@@ -5,7 +5,7 @@ if (empty($_GET)) {
 else {
 // Aletaan tarkistaa vastauksia
 $output = "<h2>Tarkistetaan vastaukset...</h2>";
-$xml = simplexml_load_file('data/visa1.xml');
+$xml = simplexml_load_file('data/visa.xml');
 $pisteet = 0;
 $kokonaisPisteet = 0;
 $i = 1;

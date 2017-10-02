@@ -3,7 +3,7 @@
 if (empty($_GET) || !isset($_GET['id']))
   die("Olet ilmeisesti eksynyt!");
 
-$xml = simplexml_load_file('data/visa1.xml');
+$xml = simplexml_load_file('data/visa.xml');
 
 $i = intval($_GET['id']);
 
@@ -14,6 +14,6 @@ $dom = new DOMDocument("1.0");
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
 $dom->loadXML($xml->asXML());
-$dom->save('data/visa1.xml');
+$dom->save('data/visa.xml');
 
 header('Location:muokkaaVisaa.php');

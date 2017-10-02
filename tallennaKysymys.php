@@ -24,7 +24,7 @@ if (!empty($errors)) {
 } else {
   $output = 'Lomake täytetty ja aloitetaan tallennus';
 
-  $xml = simplexml_load_file('data/visa1.xml');
+  $xml = simplexml_load_file('data/visa.xml');
   $uusiKysymys = $xml->addChild('taso');
   $uusiKysymys->addChild('kysymys', $kysymys);
   $uusiKysymys->addChild('vastaus', $vastaus1);
@@ -40,7 +40,7 @@ if (!empty($errors)) {
   $dom->preserveWhiteSpace = false;
   $dom->formatOutput = true;
   $dom->loadXML($xml->asXML());
-  $dom->save('data/visa1.xml');
+  $dom->save('data/visa.xml');
 }
 
 header('refresh:2;url=muokkaaVisaa.php');

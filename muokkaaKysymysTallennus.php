@@ -24,7 +24,7 @@ $v4 = $_POST['vastaus4'];
 $v5 = $_POST['vastaus5'];
 $oikein = intval($_POST['oikein']);
 
-$xml = simplexml_load_file('data/visa1.xml');
+$xml = simplexml_load_file('data/visa.xml');
 $xml->taso[$id]->kysymys = $kysymys;
 $xml->taso[$id]->attributes()->pisteet = $pisteet;
 
@@ -46,6 +46,6 @@ $dom = new DOMDocument("1.0");
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
 $dom->loadXML($xml->asXML());
-$dom->save('data/visa1.xml');
+$dom->save('data/visa.xml');
 
 header('Location: muokkaaVisaa.php');
